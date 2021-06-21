@@ -9,5 +9,11 @@ export class ShoppingListService {
     addIngredient(ingredient: Ingredient) {
         this.ingredients.push(ingredient);
     }
+
+    addManyIngredients(ingredients: Ingredient[]) {
+        for (let index = 0; index < ingredients.length; index++) {
+            this.addIngredient(ingredients[index])    
+        }
+    }
     
 }
